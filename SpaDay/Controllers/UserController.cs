@@ -24,6 +24,8 @@ namespace SpaDay.Controllers
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
             ViewBag.username = newUser.Username;
+            ViewBag.email = newUser.Email;
+
             if (verify == newUser.Password)
             {
                 return View("Index");
