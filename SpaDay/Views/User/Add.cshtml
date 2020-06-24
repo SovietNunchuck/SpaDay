@@ -1,0 +1,25 @@
+﻿<h1>Add User</h1>
+
+<form method="post" action="/user">
+    <div>
+        <label for="username">Username: <input class="form-control" type="text" name="username" /></label>
+    </div>
+    <div>
+        <label for="email">Email Address: <input class="form-control" type="email" name="email" /></label>
+    </div>
+    <div>
+        <label for="password">Password: <input class="form-control" type="password" name="password" /></label>
+    </div>
+    <div>
+        <label for="verify">Retype Password: <input class="form-control" type="password" name="verify" /></label>
+    </div>
+    <div>
+        <input type="submit" value="Submit" />
+    </div>
+    @if (ViewBag.error != null)
+    {
+        <div>
+            <p style="color:red">@ViewBag.error</p>
+        </div>
+    }
+</form>
