@@ -1,7 +1,7 @@
-﻿@{
-}
+﻿@using SpaDay.Models
+@model User
 
-<h1>Welcome to our spa, @ViewBag.user.Username!</h1>
+<h1>Welcome to our spa, @Model.Username!</h1>
 
 <p>
     <a asp-controller="Spa" asp-action="Index">Select Spa Services</a>
